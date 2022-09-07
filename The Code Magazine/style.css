@@ -9,7 +9,7 @@ body {
   color: #444;
   font-family: sans-serif;
 
-  border-top: 10px solid #1098ad;
+  border-top: 10px solid #4f135b;
   position: relative;
 }
 
@@ -22,6 +22,29 @@ body {
   background-color: #f7f7f7;
   padding: 20px 40px;
   margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-content{
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+.author-box{
+  display: flex; 
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.related-post{
+display: flex;
+align-items: center;
+gap: 20px;
+margin-bottom: 30px;
 }
 
 nav {
@@ -29,7 +52,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  flex: 1;
 }
 
 .post-header {
@@ -38,17 +61,17 @@ article {
 
 aside {
   background-color: #f7f7f7;
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
+  border-top: 5px solid #210923;
+  border-bottom: 5px solid #3e183d;
   padding: 50px 40px;
-  width: 500px;
+  flex: 0 0 300px; 
 }
 
 /* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
-  color: #1098ad;
+  color: #532757;
 }
 
 h1 {
@@ -70,6 +93,8 @@ h3 {
 
 h4 {
   font-size: 20px;
+  
+  margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -98,23 +123,28 @@ li:last-child {
 .author {
   font-style: italic;
   font-size: 18px;
-  float: left;
   margin-left: 20px;
   margin-top: 10px;
 }
 
-.author-img{
-  float: left;
-  margin-bottom: 20px;
-}
 
 #copyright {
   font-size: 16px;
+  text-align: center;
 }
 
 .related-author {
   font-size: 18px;
+  font-style:italic;
+  font-weight: normal;
+}
+
+.related-link:link{
+  font-size: 17px;
+  font-style: normal;
   font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .related {
@@ -135,12 +165,12 @@ article p:first-child {
 }
 
 a:link {
-  color: #1098ad;
+  color: #5d2964;
   text-decoration: none;
 }
 
 a:visited {
-  color: #1098ad;
+  color: #5d2964;
 }
 
 a:hover {
@@ -161,7 +191,6 @@ a:active {
 
 nav a:link {
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
 }
 
@@ -200,4 +229,3 @@ h2::before {
   top: -10px;
   right: -25px;
 }
-
