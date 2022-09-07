@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -13,7 +14,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -39,7 +40,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
+  padding: 50px 40px;
   width: 500px;
 }
 
@@ -94,9 +95,17 @@ li:last-child {
   margin-bottom: 0;
 }
 
-#author {
+.author {
   font-style: italic;
   font-size: 18px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.author-img{
+  float: left;
+  margin-bottom: 20px;
 }
 
 #copyright {
@@ -110,6 +119,7 @@ li:last-child {
 
 .related {
   list-style: none;
+  margin-left: 0;
 }
 
 li:first-child {
@@ -190,3 +200,4 @@ h2::before {
   top: -10px;
   right: -25px;
 }
+
