@@ -8,7 +8,9 @@ FONT SIZE SYSTEM (px)
 
 /*
 main: #087f5b 
+lighter main: #0ca678 
 grey color: #343a40 
+lighter grey: #495057
 
 */
 
@@ -24,6 +26,7 @@ grey color: #343a40
 body {
   font-family: 'Inter', sans-serif;
   color: #343a40;
+  border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -54,11 +57,24 @@ background-color: #087f5b ;
 color: #fff;
 text-decoration: none;
 text-transform: uppercase;
-padding: 16px 32px;
 display: inline-block;
 font-weight: 600;
 }
 
+.btn:hover,
+.btn:active{
+  background-color: #0ca678;
+}
+
+.btn--small{
+font-size: 14px;
+padding: 8px 12px;
+}
+
+.btn--big{
+padding: 16px 32px;
+font-size: 18px;
+}
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
@@ -108,6 +124,9 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: #087f5b;
+  color: #fff;
+  padding: 24px;
 }
 
 .testimonial-box {
@@ -165,4 +184,5 @@ h3 {
 footer {
   margin-bottom: 48px;
   font-size: 14px;
+  color: #495057;
 }
