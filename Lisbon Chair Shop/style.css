@@ -14,6 +14,11 @@ lighter grey: #495057
 
 */
 
+/* 
+ICON PACK: 
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -110,6 +115,16 @@ img {
 
 /* FEATURES */
 .features-icon {
+  stroke: #087f5b;
+  width: 32px;
+  height: 32x;
+  margin-bottom: 16px;
+}
+
+.chair-icon{
+stroke: #087f5b;
+width: 24px;
+height: 24px;
 }
 
 .features-title {
