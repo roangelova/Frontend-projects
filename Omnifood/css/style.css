@@ -16,7 +16,14 @@ accents:
 greys: #555 
 #333
 
+--03 border radius 
+ 9px as default 
 
+--04 font weights
+default: 400
+medium: 500
+semi-bold: 600
+bold: 700
 
 
 */
@@ -39,7 +46,7 @@ body {
     color: #555;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,8 +55,47 @@ body {
     padding: 0 4.8rem;
 }
 
-.logo{
+.logo {
     height: 2.2rem;
+}
+
+.main-nav-list {
+    display: inline-block;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    display: inline-block;
+    color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+    border-radius: 9px;
+    padding: 2rem 2.4rem;
+    color: #fff;
+    background-color: #e67e22;
+    display: inline-block;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+    background-color: #cf711f;
 }
 
 .section-hero {
@@ -140,8 +186,8 @@ body {
     border: 3px solid #fdf2e9;
 }
 
-.delivered-imgs img:last-child{
-margin: 0px;
+.delivered-imgs img:last-child {
+    margin: 0px;
 }
 
 .delivered-text {
@@ -149,7 +195,7 @@ margin: 0px;
     font-weight: 600;
 }
 
-.delivered-text span{
+.delivered-text span {
     color: #cf711f;
     font-weight: 700;
 }
