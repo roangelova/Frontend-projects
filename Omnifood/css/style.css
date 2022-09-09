@@ -216,3 +216,19 @@ Medium: 11px
     font-size: 1.8rem;
     line-height: 1.6;
 }
+
+.section-featured{
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+.logos{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logos img{
+height: 3.2rem;
+filter: brightness(0); 
+opacity: 53%;
+}
