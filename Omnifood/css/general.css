@@ -1,0 +1,108 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    list-style: 1;
+    font-weight: 400;
+    color: #555;
+}
+.grid {
+    display: grid;
+    gap: 9.6rem;
+}
+
+.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.heading-primary,
+.heading-secondary {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.heading-tertiary {
+
+
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1.6rem 3.2rem;
+    border-radius: 150px;
+
+    transition: all 0.3s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #cf711f;
+}
+
+.btn-outline:link,
+.btn-outline:visited {
+    background-color: #fff;
+    color: #555;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+    background-color: #fdf2e9;
+
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+    margin-right: 1.6rem !important;
+}
