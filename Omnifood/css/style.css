@@ -232,3 +232,29 @@ height: 3.2rem;
 filter: brightness(0); 
 opacity: 53%;
 }
+
+.section-meals{
+    padding: 9.6rem 0;
+}
+
+.meal-img{
+    width: 100%;
+}
+
+.meal-attributes{
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.meal-attribute{
+font-size: 1.8rem;
+}
+
+.meal-title{
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
