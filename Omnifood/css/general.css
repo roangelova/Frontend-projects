@@ -15,9 +15,15 @@ body {
     font-weight: 400;
     color: #555;
 }
+
 .grid {
     display: grid;
-    gap: 9.6rem;
+    row-gap: 9.6rem;
+    column-gap: 6.4rem;
+}
+
+.grid-center-v {
+    align-items: center;
 }
 
 .grid-2-cols {
@@ -35,7 +41,8 @@ body {
 }
 
 .heading-primary,
-.heading-secondary {
+.heading-secondary,
+.heading-tertiary {
     font-weight: 700;
     color: #333;
     letter-spacing: -0.5px;
@@ -50,12 +57,13 @@ body {
 .heading-secondary {
     font-size: 4.4rem;
     line-height: 1.2;
-    margin-bottom: 3.2rem;
+    margin-bottom: 9.6rem;
 }
 
 .heading-tertiary {
-
-
+    font-size: 3.0rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
 }
 
 .subheading {

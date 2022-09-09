@@ -1,50 +1,53 @@
 /*
---- 01 Typography system 
+--- 01 TYPOGRAPHY SYSTEM
 
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-FONT SIZE SYSTEM (px)
+- Font sizes (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+- Letter spacing
+-0.5px
+0.75px
 
----02 Colors
+--- 02 COLORS
 
-primary: #e67e22
-tints: #fdf2e9
-shades: #cf711f
-accents:
-greys: #555 
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
+- Shades: 
+#cf711f
+#45260a
+- Accents:
+- Greys
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
 #333
 
---03 border radius 
- 9px as default 
+--- 05 SHADOWS
 
---04 font weights
-default: 400
-medium: 500
-semi-bold: 600
-bold: 700
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+--- 06 BORDER-RADIUS
+Default: 9px
+Medium: 11px
 
+--- 07 WHITESPACE
 
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
-html {
-    font-size: 62.5%;
-}
-
-* {
-
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Rubik', sans-serif;
-    list-style: 1;
-    font-weight: 400;
-    color: #555;
-}
 
 .header {
     display: flex;
@@ -103,15 +106,6 @@ body {
     padding: 4.8rem 0 9.6rem 0;
 }
 
-.heading-primary {
-    font-size: 5.2rem;
-    font-weight: 700;
-    line-height: 1.05;
-    color: #333;
-    letter-spacing: -0.5px;
-    margin-bottom: 3.2rem;
-}
-
 .hero-description {
     font-size: 2rem;
     line-height: 1.5;
@@ -130,41 +124,6 @@ body {
 
 .hero-img {
     width: 100%;
-}
-
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    font-size: 2rem;
-    text-decoration: none;
-    padding: 1.6rem 3.2rem;
-    border-radius: 150px;
-
-    transition: all 0.3s;
-}
-
-.btn-full:link,
-.btn-full:visited {
-    background-color: #e67e22;
-    color: #fff;
-}
-
-.btn-full:hover,
-.btn-full:active {
-    background-color: #cf711f;
-}
-
-.btn-outline:link,
-.btn-outline:visited {
-    background-color: #fff;
-    color: #555;
-}
-
-.btn-outline:hover,
-.btn-outline:active {
-    background-color: #fdf2e9;
-
-    box-shadow: inset 0 0 0 3px #fff;
 }
 
 .delivered-meals {
@@ -200,38 +159,60 @@ body {
     font-weight: 700;
 }
 
-.grid{
-    display: grid;
-    gap: 9.6rem;
-}
 
-.grid-2-cols{
-     grid-template-columns: repeat(2, 1fr);
-}
+/*****************************/
+/*HOW IT WORKS SECTION*/
+/*****************************/
 
-.grid-3-cols{
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.section-how{
+.section-how {
     padding: 9.6rem 0;
-    background-color: rgb(54, 92, 92);
 }
 
-.section-how div div{
-    padding: 100px;
-    font-size: 50px;
-    background-color: aliceblue;
+.step-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.container{
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 3.2rem;
+.step-img-box::after,
+.step-img-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
 }
 
-/* HELPERS */
+.step-img-box::before {
+    width: 60%;
+    padding-bottom: 60%;
+    background-color: #fdf2e9;
+    z-index: -2;
+}
 
-.margin-right-sm {
-    margin-right: 1.6rem !important;
+.step-img-box::after {
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    z-index: -1;
+}
+
+.step-img {
+    width: 35%;
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.6;
 }
