@@ -483,31 +483,57 @@ Medium: 11px
   font-weight: 700;
 }
 
-.feature-icon{
-color: #e67e22;
-height: 3.2rem;
-width: 3.2rem;
-margin-bottom: 3.2rem;
+.feature-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin-bottom: 3.2rem;
 
-background-color: #fdf2e9;
-padding: 1.6rem;
-border-radius: 50%;
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
 }
 
-.feature-title{
-font-size: 2.4rem;
-color: #333;
-font-weight: 700;
-margin-bottom: 1.6rem;
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
 }
 
-.feature-text{
-font-size: 1.8rem;
-line-height: 1.8;
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 
-.plan-details{
-    font-size: 1.6rem;
-    line-height: 1.6;
-    text-align: center;
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  box-shadow: 0 2.4rem 4.8rem;
+  height: 50rem;
+}
+
+.cta-text-box {
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
 }
