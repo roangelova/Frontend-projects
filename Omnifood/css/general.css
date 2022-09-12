@@ -135,9 +135,13 @@ body {
 }
 
 .margin-bottom-md{
-    margin-bottom: 4.8rem important!;
+    margin-bottom: 4.8rem !important;
 }
 
 strong{
    font-weight: 500; 
+}
+
+.center-text{
+    text-align: center;
 }
