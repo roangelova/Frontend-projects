@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+*:focus{
+   outline: none;
+   box-shadow: 0 0 0 0.8rem rgba(230,125,34, 0.5);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -97,13 +102,14 @@ body {
   color: #888;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
   font-size: 2rem;
   text-decoration: none;
   padding: 1.6rem 3.2rem;
-  border-radius: 150px;
+  border-radius: 9px;
 
   transition: all 0.3s;
 }
