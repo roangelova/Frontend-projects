@@ -57,12 +57,6 @@ Medium: 11px
   padding: 0 4.8rem;
 }
 
-@media (max-width: 800px) {
-  .header{
-    background-color: green;
-  }
-}
-
 .logo {
   height: 2.2rem;
 }
@@ -105,6 +99,24 @@ Medium: 11px
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+  
+    display: none;
+  }
+  
+  .icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+  }
+  
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }  
 
 .section-hero {
   background-color: #fdf2e9;
