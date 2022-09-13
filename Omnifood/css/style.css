@@ -57,6 +57,12 @@ Medium: 11px
   padding: 0 4.8rem;
 }
 
+@media (max-width: 800px) {
+  .header{
+    background-color: green;
+  }
+}
+
 .logo {
   height: 2.2rem;
 }
@@ -605,8 +611,8 @@ Medium: 11px
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
-.footer-5-cols{
-grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+.footer-5-cols {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 
 .footer {
@@ -627,55 +633,55 @@ grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
   gap: 2.4rem;
 }
 
-.footer-link:link ,
+.footer-link:link,
 .footer-link:visited {
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #767676;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
 
-    transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.footer-link:hover ,
+.footer-link:hover,
 .footer-link:active {
-    color: #555;
+  color: #555;
 }
 
-.social-links{
-    list-style: none;
-    display: flex;
-    gap: 2.4rem;
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
 }
 
-.footer-logo{
-    display: block;
-    margin-bottom: 3.2rem;
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
 }
 
-.social-icon{
-    height: 2.4rem;
-    width: 2.4rem;
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
-.copyright{
-    font-size: 1.4rem;
-    color: #767676;
-    line-height: 1.6;
-    margin-top: auto;
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
 }
 
-.logo-col{
-    display: flex;
-    flex-direction: column;
+.logo-col {
+  display: flex;
+  flex-direction: column;
 }
 
-.contacts{
-    font-style: normal;
-    font-size: 1.6rem;
-    line-height: 1.6;
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
-.address{
-    margin-bottom: 2.4rem;
-    font-size: 1.6rem;
+.address {
+  margin-bottom: 2.4rem;
+  font-size: 1.6rem;
 }
