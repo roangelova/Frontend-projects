@@ -106,6 +106,7 @@ Medium: 11px
     cursor: pointer;
   
     display: none;
+    z-index: 9999;
   }
   
   .icon-mobile-nav {
