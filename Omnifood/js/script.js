@@ -25,7 +25,14 @@ const yearElement = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
 
+//make mobile nav work
 
+const btnNavElement = document.querySelector(".btn-mobile-nav");
+const headerElement = document.querySelector(".header");
+
+btnNavElement.addEventListener("click", function () {
+  headerElement.classList.toggle("nav-open");
+});
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
