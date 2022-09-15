@@ -22,17 +22,17 @@ Dark green: #28b485
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   /* top + bottom --> in relatio to the parent*/
   top: 40%;
@@ -53,7 +53,7 @@ Dark green: #28b485
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -62,7 +62,7 @@ Dark green: #28b485
   animation: moveInLeft 1s ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -71,8 +71,8 @@ Dark green: #28b485
   animation: moveInRight 1s ease-out;
 }
 
-.btn-white,
-.btn-white {
+.btn--white,
+.btn--white {
   background-color: #fff;
   color: #777;
 }
