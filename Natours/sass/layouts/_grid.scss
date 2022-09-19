@@ -2,7 +2,6 @@
   max-width: $grid-width;
   //that will be the wdh if we have enoug available space; otherwise it will fill
   //100% of the available space
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -21,9 +20,9 @@
     }
   }
 
-  &col-1-of-2 {
+  .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
-  }
+}
 
   &col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
