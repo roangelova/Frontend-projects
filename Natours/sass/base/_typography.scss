@@ -51,7 +51,7 @@ body {
   letter-spacing: 2px;
 
   &:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    transform: skewY(1deg)  scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
