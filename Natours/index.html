@@ -317,11 +317,69 @@
     </section>
 
     <section class="section-book">
-      <div clSS="row">
+      <div class="row">
         <div class="book">
-          
-        </div>
+          <div class="book__form">
+            <form class="form">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">Start booking now</h2>
+              </div>
+              <div class="form__group">
+                <input
+                  id="name"
+                  class="form__input"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                />
+                <label for="name" class="form__label">Full Name</label>
+              </div>
 
+              <div class="form__group">
+                <input
+                  id="email"
+                  class="form__input"
+                  type="email"
+                  placeholder="Email address"
+                  required
+                />
+                <label for="email" class="form__label">Email address</label>
+              </div>
+
+              <div class="form__group u-margin-bottom-medium">
+                <div class="form__radio-group">
+                  <input
+                    class="form__radio-input"
+                    type="radio"
+                    id="small"
+                    name="size"
+                  />
+                  <label class="form__radio-label" for="small">
+                    <span class="form__radio-button"></span>
+                    Small tour group</label
+                  >
+                </div>
+                <div class="form__radio-group">
+                  <input
+                    class="form__radio-input"
+                    type="radio"
+                    id="large"
+                    name="size"
+                  />
+                  <label class="form__radio-label" for="large">
+                    <span class="form__radio-button"></span>
+                    Large tour group</label
+                  >
+                </div>
+              </div>
+
+              <div class="form__group">
+                <button class="btn btn--green">Next step</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </body>
