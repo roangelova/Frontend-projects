@@ -12,7 +12,10 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+
+    cursor: pointer;
   }
 
   &__background {
@@ -26,7 +29,7 @@
     background-image: radial-gradient($color-primary, $color-primary-dark);
     z-index: 1000;
 
-    transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.7, 1);
   }
 
   &__nav {
@@ -39,7 +42,7 @@
     opacity: 0;
     width: 0;
 
-    transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   &__list {
@@ -57,10 +60,9 @@
   }
 
   &__link {
-
     &:link,
     &:visited {
-        display: inline-block;
+      display: inline-block;
       font-size: 3rem;
       font-weight: 300;
       color: $color-white;
@@ -69,12 +71,17 @@
 
       padding: 1rem 2rem;
 
-      background-image: linear-gradient(120deg,transparent 0%,transparent 50%,$color-white 50%);
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
       background-size: 220%;
 
-      transition: all .4s;
+      transition: all 0.4s;
 
-      span{
+      span {
         margin-right: 1rem;
         display: inline-block;
       }
@@ -82,18 +89,77 @@
 
     &:hover,
     &:active {
-        background-position: 100%;
-        color: $color-primary;
-        transform: translateX(1rem);
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
     }
   }
 
-  &__checkbox:checked ~ &__background{
+  &__checkbox:checked ~ &__background {
     transform: scale(80);
   }
 
-  &__checkbox:checked ~ &__nav{
+  &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+  }
+
+  //ICON
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-grey-dark-2;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+
+      transition: all .2s;
+    }
+
+    &::after{
+      top:.8rem;
+    }
+
+    &::before{
+      top:-.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before{
+    top:-1rem;
+  }
+
+  &__button:hover &__icon::after{
+    top:1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon{
+    //when the checkbox is checked, we select it's adjasoned sibling
+    //, which is th ebutton, and then it's child --> the icon
+
+    //it should not disappear, as the befoe and after depend on it for their positioning
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before{
+    transform: rotate(135deg);
+    top:0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after{
+    transform: rotate(-135deg);
+    top:0;
   }
 }
