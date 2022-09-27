@@ -1,0 +1,30 @@
+
+.container{
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow:  var(--shadow-dark);
+    min-height: 50rem;
+}
+
+.header{
+height: 7rem;
+background-color: #fff;
+border-bottom: var(--color-grey-light-2);
+}
+
+.content{
+    display: flex;
+}
+
+.sidebar{
+background-color: var(--color-grey-dark-1);
+
+//grow shrink basis
+flex: 0 0 18%;
+}
+
+.hotel-view{
+    background-color: #fff;
+    flex: 1 ; //it will grow as much as it can and it will occupy the remaining 82%
+}
