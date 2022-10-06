@@ -4,7 +4,7 @@
     margin: 8rem auto;
     background-color: var(--color-grey-light-2);
     box-shadow:  var(--shadow-dark);
-    min-height: 90rem;
+    min-height: 50rem;
 }
 
 .header{
@@ -34,4 +34,46 @@ justify-content: space-between;
 .hotel-view{
     background-color: #fff;
     flex: 1 ; //it will grow as much as it can and it will occupy the remaining 82%
+}
+
+.detail {
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
