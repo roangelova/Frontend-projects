@@ -5,5 +5,18 @@
 
   &__content {
     grid-column: col-start 5 / full-end;
+
+    padding: 6rem 8cw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
   }
 }
