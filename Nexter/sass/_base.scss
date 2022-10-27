@@ -14,9 +14,19 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen  and (max-width: $bp-largest){
+    font-size: 50%;
+  }
 }
 
 body {
@@ -46,4 +56,16 @@ body {
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end]; //starts t adapt to the vw
   grid-row-gap: 10rem;
+
+  @media only screen  and (max-width: $bp-large){
+    grid-template-rows: 4rem 88vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(
+        6rem,
+        1fr
+      ) [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end]; 
+  }
 }
+

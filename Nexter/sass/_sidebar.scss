@@ -1,30 +1,46 @@
 .sidebar {
-    background-color: $color-primary;
-    grid-column: sidebar-start / sidebar-end;
-    grid-row: 1 / -1;
+  background-color: $color-primary;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1;
 
-    display: flex;
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    margin-bottom: -10rem;
     justify-content: center;
+    align-items: center;
+  }
 }
 
 .nav-btn {
-    border: none;
-    border-radius: 0;
+  border: none;
+  border-radius: 0;
 
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem;
+
+  &::before,
+  &::after {
     background-color: #fff;
     height: 2px;
     width: 4.5rem;
-    margin-top: 4rem;
+    content: "";
+    display: block;
+  }
 
-    &::before,
-    &::after {
-        background-color: #fff;
-        height: 2px;
-        width: 4.5rem;
-        content: "";
-        display: block;
-    }
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
 
-    &::before { transform: translateY(-1.5rem); }
-    &::after { transform: translateY(1.3rem); }
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+  }
 }
