@@ -16,7 +16,7 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <div class="navigation">
+    <div class="navigation" id="navigation">
       <input
         type="checkbox"
         class="navigation__checkbox"
@@ -59,7 +59,7 @@
       </nav>
     </div>
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo-box">
         <img
           class="header__logo"
@@ -79,7 +79,7 @@
     </header>
 
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -129,7 +129,7 @@
         </div>
       </section>
 
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -224,7 +224,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -284,7 +284,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$697</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@
         </div>
       </section>
 
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="./img/video.mp4" type="video/mp4" />
@@ -363,7 +363,7 @@
         </div>
       </section>
 
-      <section class="section-book">
+      <section class="section-book" id="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -469,22 +469,38 @@
       </div>
     </footer>
 
-    <div class="popup">
+    <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
           <img class="popup__img" src="img/nat-8.jpg" alt="image 1" />
           <img class="popup__img" src="img/nat-9.jpg" alt="image 2" />
         </div>
         <div class="popup__right">
-          <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
-          <h3 class="heading-tertiary u-margin-bottom-small">Important &dash; Please read the terms before booking</h3>
-        <p class="popup__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut quibusdam ipsam ab exercitationem repudiandae aliquam tenetur, reprehenderit molestias autem nam blanditiis similique voluptas odit quae illo modi. Praesentium, provident!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut quibusdam ipsam ab exercitationem repudiandae aliquam tenetur, reprehenderit molestias autem nam blanditiis similique voluptas odit quae illo modi. Praesentium, provident!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut quibusdam ipsam ab exercitationem repudiandae aliquam tenetur, reprehenderit molestias autem nam blanditiis similique voluptas odit quae illo modi. Praesentium, provident!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut quibusdam ipsam ab exercitationem repudiandae aliquam tenetur, reprehenderit molestias autem nam blanditiis similique voluptas odit quae illo modi. Praesentium, provident!
-        </p>
-        <a href="#" class="btn btn--green">Book now</a>
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-medium">
+            Start booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &dash; Please read the terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ut
+            quibusdam ipsam ab exercitationem repudiandae aliquam tenetur,
+            reprehenderit molestias autem nam blanditiis similique voluptas odit
+            quae illo modi. Praesentium, provident! Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Atque ut quibusdam ipsam ab
+            exercitationem repudiandae aliquam tenetur, reprehenderit molestias
+            autem nam blanditiis similique voluptas odit quae illo modi.
+            Praesentium, provident! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Atque ut quibusdam ipsam ab exercitationem
+            repudiandae aliquam tenetur, reprehenderit molestias autem nam
+            blanditiis similique voluptas odit quae illo modi. Praesentium,
+            provident! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Atque ut quibusdam ipsam ab exercitationem repudiandae aliquam
+            tenetur, reprehenderit molestias autem nam blanditiis similique
+            voluptas odit quae illo modi. Praesentium, provident!
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
         </div>
       </div>
     </div>

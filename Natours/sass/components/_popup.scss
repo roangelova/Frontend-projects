@@ -7,24 +7,66 @@
   background-color: rgba($color-black, 0.8);
   z-index: 9999;
 
+  //make it no-visible when not clicked
+  opacity: zero;
+  visibility: hidden;
+
+  transition: all 0.4s;
+
+  //when href="#popup is clicked, this elment becomes the target"
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $color-grey-dark;
+      position: absolute;
+      top: 1rem;
+      right: 2.5rem;
+      font-size: 4rem;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+
   &__content {
-    width: 76%;
+    @include absoluteCenter;
+    width: 75%;
+    height: 50%;
     background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
     border-radius: 3px;
     display: table;
     overflow: hidden;
+    opacity: 0;
 
-    @include absoluteCenter;
+    transform:  scale(0.5);
+
+    transition: all 0.4s 0.2s;
   }
 
   &__left {
-    width: 33.33333333%;
+    width: 33.333%;
+    height: 150%;
     display: table-cell;
   }
 
   &__right {
-    width: 66.6666667%;
+    height: 100%;
+    width: 66.667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
@@ -33,6 +75,8 @@
   &__img {
     display: block;
     width: 100%;
+    height: 110%;
+    margin: -15px -15px;
   }
 
   &__text {
@@ -41,5 +85,8 @@
 
     column-count: 2;
     column-gap: 4rem;
+    column-rule: 2px solid $color-grey-light-1;
+
+    // hyphens: auto;
   }
 }
