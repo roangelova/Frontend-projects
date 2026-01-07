@@ -1,3 +1,18 @@
+enum ProjectStatus{
+    Active, Finished
+}
+
+//PROJECT TYPE
+class Project {
+
+    constructor(public id: string, public title: string, public description: string, public people: number, public status: ProjectStatus)
+    {
+
+    }
+}
+
+type Listener = (items: Project[]) => void;
+
 //autobind decorator
 //function autobind(target: any, methodName: string, descriptor: PropertyDescriptor) {
 function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
@@ -16,18 +31,38 @@ function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
 
 //ROJECT STATE MANAGEMENT
 class ProjectState{
-    private projects : any[]= [];
+    private listeners: Listener[] = [];
+    private projects : Project[]= [];
+    private static instance: ProjectState;
+
+    private constructor(){
+
+    }
+
+    static getInstance(){
+        if (this.instance){
+            return this.instance;
+        }
+        this.instance = new ProjectState;
+        return this.instance;
+    }
+
+    addListener(listenerFN : Listener){
+        this.listeners.push(listenerFN);
+        //we will call our listeners whenever something changes
+    }
 
     addProject(title:string, description:string, numOfPeople:number){
-        const newProject = {
-            id: Math.random().toString(),
-            title: title,
-            description: description,
-            people: numOfPeople
-        };
+        const newProject = new Project(Math.random().toString(), title, description, numOfPeople, ProjectStatus.Active);
         this.projects.push(newProject);
+
+        for(const listenerFN of this.listeners){
+            listenerFN(this.projects.slice()) //we want to send a copy and not the original arr to make sure its not editable; 
+        }
     }
 }
+
+const projectState =ProjectState.getInstance(); //global state and we will always have our 1 state obj
 
 //VALIDATION
 interface Validatable {
@@ -67,20 +102,37 @@ class ProjectList {
     templateElement: HTMLTemplateElement;
     hostElement: HTMLDivElement;
     element: HTMLElement; //there isnt an HTMLSectionType
+    assignedProjects: Project[];
 
     constructor(private type: 'active' | 'finished') { //accessor will auto add a property of the same name and stores the value
         this.templateElement = <HTMLTemplateElement>document.getElementById('project-list')!;
         this.hostElement = document.getElementById('app')! as HTMLDivElement;
+        this.assignedProjects = [];
 
         const importedNode = document.importNode(this.templateElement.content, true);
         this.element = importedNode.firstElementChild as HTMLElement;
         this.element.id =  `${this.type}-projects`; //it will be dynamics based on isActive or not project
+
+        projectState.addListener((projects: Project[])=> {
+            this.assignedProjects = projects;
+            this.renderProjects();
+        });
+
         this.attach();
         this.renderContent();
     }
 
+    private renderProjects(){
+        const listEl = document.getElementById(`${this.type}-project-list`)! as HTMLUListElement;
+        console.log(listEl)
+        for ( const prjItem of this.assignedProjects){
+            const listItem = document.createElement('li');
+            listItem.textContent = prjItem.title; 
+            listEl.appendChild(listItem)
+        }
+    }
+
     private renderContent(){
-        //TODO -> .169 
         const listId = `${this.type}-project-list`;
         this.element.querySelector('ul')!.id = listId;
         this.element.querySelector('h2')!.textContent = this.type.toUpperCase() + ' PROJECTS';
@@ -133,7 +185,7 @@ class ProjectInput {
         if (Array.isArray(userInput))//HOW WE CAN CHECK FOR A TUPLE
         {
             const [title, desc, people] = userInput;
-            console.log(title, people, desc)
+            projectState.addProject(title, desc, people);
             this.clearInputs();
         }
     }
